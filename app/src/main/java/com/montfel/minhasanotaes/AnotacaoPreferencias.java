@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 public class AnotacaoPreferencias {
 
     private final String NOME_ARQUIVO = "anotacao.preferencias";
-    private final String CHAVE_NOME = "nome";
+    private final String CHAVE_NOME = "anotacao";
     private Context context;
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
@@ -20,11 +20,9 @@ public class AnotacaoPreferencias {
     public void salvarAnotacao(String anotacao) {
         editor.putString(CHAVE_NOME, anotacao);
         editor.commit();
-
     }
 
     public String recuperarAnotacao() {
         return preferences.getString(CHAVE_NOME, "");
     }
-
 }

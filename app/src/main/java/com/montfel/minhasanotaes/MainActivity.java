@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         binding.fab.setOnClickListener(view -> {
             String textoRecuperado = editAnotacao.getText().toString();
             if (textoRecuperado.equals("")) {
-                Snackbar.make(view, "Preencha a anotação!", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(view, R.string.preencha_anotacao, Snackbar.LENGTH_LONG).show();
             } else {
                 preferencias.salvarAnotacao(textoRecuperado);
-                Snackbar.make(view, "Anotação salva com sucesso!", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(view, R.string.anotacao_salva, Snackbar.LENGTH_LONG).show();
             }
         });
 
